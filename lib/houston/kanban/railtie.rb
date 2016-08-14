@@ -1,7 +1,7 @@
 require "houston/kanban/ticket"
 
 module Houston
-  module Scheduler
+  module Kanban
     class Railtie < ::Rails::Railtie
       
       # The block you pass to this method will run for every request in

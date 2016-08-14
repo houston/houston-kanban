@@ -1,10 +1,6 @@
 module Houston::Kanban
   class Configuration
     
-    def initialize
-      instance_eval(&Houston.config.module(:kanban).config)
-    end
-    
     def queues(&block)
       if block_given?
         builder = Houston::Kanban::QueuesBuilder.new
