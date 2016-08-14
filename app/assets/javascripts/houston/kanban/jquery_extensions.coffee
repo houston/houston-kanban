@@ -1,5 +1,5 @@
 $.fn.extend
-  
+
   popoverForTicket: ->
     $queue = $(@).closest('ul')
     queue = $queue.attr('id')
@@ -7,7 +7,7 @@ $.fn.extend
     is_manual_queue = $queue.closest('.kanban-column').hasClass('manual')
     $(@).popover
       placement: placement
-      title: -> 
+      title: ->
         $(@).attr('data-project')
       content: ->
         content = $(@).find('.ticket-summary').html().split(': ')
