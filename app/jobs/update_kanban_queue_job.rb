@@ -9,7 +9,7 @@ class UpdateKanbanQueueJob
   end
 
   def run!
-    Project.where(ticket_tracker_name: "Unfuddle").each do |project|
+    Project.with_ticket_tracker("Unfuddle").each do |project|
       update_tickets_for_project!(project)
     end
   rescue QuitAll
