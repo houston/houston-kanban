@@ -12,11 +12,13 @@ Houston.config do
   host "houston.test.com"
   mailer_sender "houston@test.com"
 
-  ticket_types(
-    "Chore"       => "909090",
-    "Feature"     => "8DB500",
-    "Enhancement" => "3383A8",
-    "Bug"         => "C64537" )
+  use :tickets do
+    ticket_types(
+      "Chore"       => "909090",
+      "Feature"     => "8DB500",
+      "Enhancement" => "3383A8",
+      "Bug"         => "C64537" )
+  end
 
   # Mount this module on the dummy Houston application.
   use :kanban do

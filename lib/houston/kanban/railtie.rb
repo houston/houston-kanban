@@ -1,3 +1,4 @@
+require "houston/tickets"
 require "houston/kanban/ticket"
 
 module Houston

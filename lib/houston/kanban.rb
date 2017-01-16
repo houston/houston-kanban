@@ -5,6 +5,10 @@ module Houston
   module Kanban
     extend self
 
+    def dependencies
+      [:tickets]
+    end
+
     def config(&block)
       @configuration ||= Kanban::Configuration.new
       @configuration.instance_eval(&block) if block_given?
