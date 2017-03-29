@@ -1,7 +1,7 @@
 module Houston::Kanban
   class ProjectKanbanController < ApplicationController
-    before_filter :find_project
-    before_filter :no_cache, :only => [:queue]
+    before_action :find_project
+    before_action :no_cache, :only => [:queue]
     layout "houston/kanban/application"
     helper Houston::Kanban::KanbanHelper
 
